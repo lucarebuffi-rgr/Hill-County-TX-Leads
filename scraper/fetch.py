@@ -306,19 +306,10 @@ def parse_results_html(html: str, doc_type: str, cat: str, cat_label: str,
         for item in items:
             full_text = item.get_text(" ", strip=True)
 
-            m = re.search(r"(\d{4}-\d+)", full_text)
-            if not m:
-                continue
-            instrument = m.group(1)
-            if instrument in seen:
-                continue
-            seen.add(instrument)
-
+            # Walk the labeled columns FIRST to get authoritative values
+            # (doc_number, recording date, grantor, grantee, legal).
+            instrument = ""
             filed = ""
-            m2 = re.search(r"(\d{2}/\d{2}/\d{4})", full_text)
-            if m2:
-                filed = m2.group(1)
-
             grantor = ""
             grantee = ""
             legal   = ""
@@ -343,9 +334,43 @@ def parse_results_html(html: str, doc_type: str, cat: str, cat_label: str,
                     grantee = val
                 elif "legal" in label:
                     legal = val
+                elif ("document" in label and ("number" in label or "#" in label)) \
+                     or label.strip() in ("doc #", "doc number", "instrument"):
+                    instrument = val
+                elif ("recording" in label or "rec date" in label or
+                      "filed" in label or "file date" in label or "date" in label):
+                    if not filed:
+                        filed = val
+
+            # Fallbacks if the labeled columns didn't give us a doc number.
+            # Try several common Tyler Tech formats.
+            if not instrument:
+                for pattern in (r"(\d{4}-\d+)",          # 2026-12345 (Kaufman style)
+                                r"\b(\d{8,})\b",          # 00012345 (8+ digit plain)
+                                r"\b([A-Z]{1,3}\d{6,})\b"):  # prefix+digits
+                    m = re.search(pattern, full_text)
+                    if m:
+                        instrument = m.group(1)
+                        break
+
+            if not filed:
+                m2 = re.search(r"(\d{2}/\d{2}/\d{4})", full_text)
+                if m2:
+                    filed = m2.group(1)
+
+            # Skip records we genuinely can't identify
+            if not instrument and not (grantor or grantee):
+                continue
+            if not instrument:
+                # synthesize an ID so dedupe still works
+                instrument = f"NOID-{abs(hash(full_text)) % 10**8}"
+
+            if instrument in seen:
+                continue
+            seen.add(instrument)
 
             if debug:
-                log.info(f"  PARSED: {instrument} | grantor={grantor} | grantee={grantee}")
+                log.info(f"  PARSED: {instrument} | filed={filed} | grantor={grantor} | grantee={grantee}")
 
             records.append({
                 "doc_num"  : instrument,
