@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-05-03T21:34:47.285876Z",
+  "fetched_at": "2026-05-03T21:46:09.883980Z",
   "source": "Hill County TX \u2013 Tyler Technologies",
   "date_range": {
     "from": "02/02/2026",
@@ -14,7 +14,7 @@
       "filed": "2026-04-24",
       "cat": "probate",
       "cat_label": "Affidavit of Heirship",
-      "owner": "TURNER JOHN ROBERT SR DECEASED",
+      "owner": "TURNER JOHN ROBERT SR",
       "grantee": "TURNER JOHN ROBERT SR DECEASED",
       "amount": null,
       "legal": "Subdivision LAKEVIEW ADDN Lot 3 Block 4",
@@ -40,7 +40,7 @@
       "filed": "2026-04-27",
       "cat": "probate",
       "cat_label": "Affidavit of Heirship",
-      "owner": "BARNES NETA BELLE DECEASED",
+      "owner": "BARNES NETA BELLE",
       "grantee": "BARNES NETA BELLE DECEASED",
       "amount": null,
       "legal": "Abst #: 802 Survey Name: JAMES SHIPP Acres: 1.000",
@@ -168,7 +168,7 @@
       "filed": "2026-03-10",
       "cat": "probate",
       "cat_label": "Affidavit of Heirship",
-      "owner": "COX CLARENCE LOUIS DECEASED",
+      "owner": "COX CLARENCE LOUIS",
       "grantee": "COX CLARENCE LOUIS DECEASED",
       "amount": null,
       "legal": "Subdivision TRES VIDAS RANCH SUBD Tract C19A",
