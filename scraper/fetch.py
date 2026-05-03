@@ -78,8 +78,24 @@ ENTITY_FILTERS = (
     "PNC BANK", "WELLS FARGO", "BANK OF AMERICA", "CHASE BANK",
     "IDAHO HOUSING", "US BANK", "NATIONSTAR", "LAKEVIEW LOAN",
     "UNITED WHOLESALE", "PENNYMAC", "FREEDOM MORTGAGE",
-    "CHURCH", "MINISTRY", "FOUNDATION", "ESTATE OF",
+    "CHURCH", "MINISTRY", "FOUNDATION",
 )
+
+# Suffixes/prefixes used on clerk records when a party is deceased.
+# Stripped from grantor names before matching to CAD (CAD doesn't include these).
+DECEASED_TOKENS = re.compile(
+    r"\b(DECEASED|DECD|DEC'D|ESTATE\s+OF|EST\s+OF)\b\.?",
+    re.IGNORECASE,
+)
+
+
+def strip_deceased(name: str) -> str:
+    """Remove deceased markers so 'BARNES NETA BELLE DECEASED' matches 'BARNES NETA B' in CAD."""
+    if not name:
+        return name
+    cleaned = DECEASED_TOKENS.sub("", name).strip()
+    cleaned = re.sub(r"\s+", " ", cleaned)
+    return cleaned
 
 
 # ---------------------------------------------------------------------------
@@ -221,6 +237,8 @@ def build_parcel_lookup() -> dict:
                 continue
 
             owner_name = row.get("file_as_na", "").strip().upper()
+            # Defensive: strip any 'DECEASED' tokens from CAD too (rare but possible)
+            owner_name = strip_deceased(owner_name)
             if not owner_name or is_entity(owner_name):
                 continue
 
@@ -554,8 +572,11 @@ def enrich_with_parcel(records: list, lookup: dict) -> list:
     matched = 0
     for rec in records:
         dtype  = rec.get("doc_type", "")
-        owner  = (rec.get("grantee") if dtype in GRANTEE_IS_OWNER
-                  else rec.get("grantor") or "").upper().strip()
+        owner_raw = (rec.get("grantee") if dtype in GRANTEE_IS_OWNER
+                     else rec.get("grantor") or "").upper().strip()
+        # Strip 'DECEASED', 'ESTATE OF', etc. BEFORE entity check so heirship
+        # records like 'ESTATE OF JOHN SMITH' aren't filtered out as entities.
+        owner = strip_deceased(owner_raw)
         parcel = None
         if is_entity(owner):
             rec.setdefault("prop_address", "")
@@ -662,6 +683,8 @@ def build_output(raw_records: list, date_from: str, date_to: str) -> dict:
             else:
                 owner   = raw.get("grantor", "")
                 grantee = raw.get("grantee", "")
+            # Strip deceased markers so the entity filters below don't drop heirship records
+            owner = strip_deceased(owner)
             if not owner:
                 owner = f"UNKNOWN ({doc_num})"
             score, flags = score_record({**raw, "owner": owner})
