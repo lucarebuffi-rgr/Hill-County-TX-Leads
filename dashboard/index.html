@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hill County, TX — Motivated Seller Leads</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         margin: 0; padding: 24px; background: #f5f5f7; color: #1d1d1f; }
+  h1 { margin: 0 0 4px 0; font-size: 24px; }
+  .meta { color: #6e6e73; font-size: 14px; margin-bottom: 20px; }
+  .controls { display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+  input[type="search"], select {
+    padding: 8px 12px; border: 1px solid #d2d2d7; border-radius: 8px;
+    font-size: 14px; background: white;
+  }
+  input[type="search"] { flex: 1; min-width: 240px; }
+  button {
+    padding: 8px 16px; border: none; border-radius: 8px;
+    background: #0071e3; color: white; font-size: 14px; font-weight: 500;
+    cursor: pointer;
+  }
+  button:hover { background: #0077ed; }
+  table { width: 100%; border-collapse: collapse; background: white;
+          border-radius: 12px; overflow: hidden;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.06); font-size: 14px; }
+  th { text-align: left; padding: 12px; background: #f5f5f7;
+       font-weight: 600; color: #6e6e73; font-size: 12px;
+       text-transform: uppercase; letter-spacing: 0.05em; }
+  td { padding: 12px; border-top: 1px solid #f0f0f0; vertical-align: top; }
+  tr:hover td { background: #fafafa; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 4px;
+         font-size: 11px; font-weight: 500; }
+  .tag.pre_foreclosure { background: #ffebe6; color: #c0392b; }
+  .tag.lien            { background: #fef3c7; color: #92400e; }
+  .tag.judgment        { background: #ede9fe; color: #5b21b6; }
+  .tag.probate         { background: #dbeafe; color: #1e40af; }
+  .tag.other           { background: #f1f5f9; color: #475569; }
+  .empty { padding: 40px; text-align: center; color: #6e6e73; }
+  .addr-small { font-size: 12px; color: #6e6e73; }
+</style>
+</head>
+<body>
+
+<h1>Hill County, TX — Motivated Seller Leads</h1>
+<div class="meta" id="meta">Loading…</div>
+
+<div class="controls">
+  <input type="search" id="search" placeholder="Search owner, address, doc type…">
+  <select id="filter">
+    <option value="">All categories</option>
+    <option value="pre_foreclosure">Pre-foreclosure</option>
+    <option value="lien">Liens</option>
+    <option value="judgment">Judgments</option>
+    <option value="probate">Probate</option>
+    <option value="other">Other</option>
+  </select>
+  <button id="export">Export GHL CSV</button>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Filing</th>
+      <th>Owner</th>
+      <th>Property Address</th>
+      <th>Mailing Address</th>
+      <th>Doc Type</th>
+      <th>Doc #</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody id="rows"></tbody>
+</table>
+
+<script>
+let allRecords = [];
+
+function fmtAddr(a) {
+  if (!a) return "";
+  return [a.street, a.city, a.state, a.zip].filter(Boolean).join(", ");
+}
+
+function render() {
+  const q = document.getElementById("search").value.toLowerCase();
+  const cat = document.getElementById("filter").value;
+  const rows = document.getElementById("rows");
+  const filtered = allRecords.filter(r => {
+    if (cat && r.category !== cat) return false;
+    if (!q) return true;
+    const blob = [
+      r.owner_name, r.doc_type, r.doc_label, r.doc_number,
+      fmtAddr(r.property_address), fmtAddr(r.mailing_address),
+    ].join(" ").toLowerCase();
+    return blob.includes(q);
+  });
+  rows.innerHTML = filtered.length ? filtered.map(r => `
+    <tr>
+      <td>${r.filing_date || ""}</td>
+      <td><strong>${r.owner_name || ""}</strong></td>
+      <td>${fmtAddr(r.property_address)}</td>
+      <td>${fmtAddr(r.mailing_address)}</td>
+      <td><span class="tag ${r.category}">${r.doc_label || r.doc_type}</span></td>
+      <td class="addr-small">${r.doc_number || ""}</td>
+      <td class="addr-small">${r.market_value ? "$" + Number(r.market_value).toLocaleString() : ""}</td>
+    </tr>
+  `).join("") : `<tr><td colspan="7" class="empty">No records match.</td></tr>`;
+}
+
+function exportCSV() {
+  const headers = ["First Name","Last Name","Full Name",
+    "Property Address","Property City","Property State","Property Zip",
+    "Mailing Address","Mailing City","Mailing State","Mailing Zip",
+    "Lead Source","Doc Type","Filing Date","Doc Number","Market Value"];
+  const rows = allRecords.map(r => {
+    const tokens = (r.owner_name || "").split(/\s+/);
+    const last = tokens[0] || "";
+    const first = tokens[1] || "";
+    const p = r.property_address || {};
+    const m = r.mailing_address || {};
+    return [first, last, r.owner_name,
+      p.street || "", p.city || "", p.state || "", p.zip || "",
+      m.street || "", m.city || "", m.state || "", m.zip || "",
+      "Hill County " + (r.doc_label || ""),
+      r.doc_type || "", r.filing_date || "",
+      r.doc_number || "", r.market_value || ""];
+  });
+  const csv = [headers, ...rows].map(row =>
+    row.map(c => `"${String(c).replace(/"/g, '""')}"`).join(",")
+  ).join("\n");
+  const blob = new Blob([csv], {type: "text/csv"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = `hill-county-leads-${new Date().toISOString().slice(0,10)}.csv`;
+  a.click();
+}
+
+fetch("records.json")
+  .then(r => r.json())
+  .then(data => {
+    allRecords = data.records || [];
+    document.getElementById("meta").textContent =
+      `${data.count} records · last ${data.lookback_days} days · updated ${new Date(data.generated_at).toLocaleString()}`;
+    render();
+  })
+  .catch(err => {
+    document.getElementById("meta").textContent = "Failed to load records.json";
+    console.error(err);
+  });
+
+document.getElementById("search").addEventListener("input", render);
+document.getElementById("filter").addEventListener("change", render);
+document.getElementById("export").addEventListener("click", exportCSV);
+</script>
+
+</body>
+</html>
