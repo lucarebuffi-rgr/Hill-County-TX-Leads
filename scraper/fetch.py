@@ -81,16 +81,16 @@ ENTITY_FILTERS = (
     "CHURCH", "MINISTRY", "FOUNDATION",
 )
 
-# Suffixes/prefixes used on clerk records when a party is deceased.
+# Suffixes/prefixes used on clerk records when a party is deceased or has aliases.
 # Stripped from grantor names before matching to CAD (CAD doesn't include these).
 DECEASED_TOKENS = re.compile(
-    r"\b(DECEASED|DECD|DEC'D|ESTATE\s+OF|EST\s+OF)\b\.?",
+    r"\b(DECEASED|DECD|DEC'D|ESTATE\s+OF|EST\s+OF|AKA|A\.K\.A\.)\b\.?",
     re.IGNORECASE,
 )
 
 
 def strip_deceased(name: str) -> str:
-    """Remove deceased markers so 'BARNES NETA BELLE DECEASED' matches 'BARNES NETA B' in CAD."""
+    """Remove deceased/AKA markers so 'BARNES NETA BELLE DECEASED' matches 'BARNES NETA B' in CAD."""
     if not name:
         return name
     cleaned = DECEASED_TOKENS.sub("", name).strip()
@@ -232,8 +232,11 @@ def build_parcel_lookup() -> dict:
 
         total = 0
         for row in read_dbf_bytes(dbf_bytes):
-            # Filter: must have improvements (a structure on the parcel)
-            if parse_imprv(row.get("imprv_val", "0")) <= 0:
+            # Filter: must have either a structure OR meaningful land value (>$10k).
+            # Hill County is rural - many parcels have no improvements but real land value.
+            imprv = parse_imprv(row.get("imprv_val", "0"))
+            land  = parse_imprv(row.get("land_val", "0"))
+            if imprv <= 0 and land <= 10000:
                 continue
 
             owner_name = row.get("file_as_na", "").strip().upper()
