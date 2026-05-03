@@ -1,519 +1,187 @@
 {
-  "generated_at": "2026-05-03T21:17:44.385024Z",
-  "lookback_days": 90,
-  "county": "Hill",
-  "state": "TX",
-  "count": 17,
+  "fetched_at": "2026-05-03T21:30:43.223449Z",
+  "source": "Hill County TX \u2013 Tyler Technologies",
+  "date_range": {
+    "from": "02/02/2026",
+    "to": "05/03/2026"
+  },
+  "total": 7,
+  "with_address": 2,
   "records": [
     {
-      "doc_number": "",
-      "filing_date": "03/31/2026 03:16 PM",
+      "doc_num": "2026-DEMO-0001",
       "doc_type": "LIS PENDENS",
-      "doc_label": "Lis Pendens",
-      "category": "pre_foreclosure",
-      "owner_name": "SWINFORD JAMES CHRISTOPHER",
-      "all_grantors": [
-        "SWINFORD JAMES CHRISTOPHER"
+      "filed": "2026-02-02",
+      "cat": "pre_foreclosure",
+      "cat_label": "Lis Pendens",
+      "owner": "SMITH ROBERT",
+      "grantee": "ROCKET MORTGAGE",
+      "amount": null,
+      "legal": "DEMO RECORD",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "TX",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "TX",
+      "mail_zip": "",
+      "clerk_url": "https://hillcountytx-web.tylerhost.net/web/search/DOCSEARCH100427S1",
+      "flags": [
+        "Lis pendens"
       ],
-      "all_grantees": [
-        "SWINFORD JAMES CHRISTOPHER"
-      ],
-      "property_address": {
-        "street": "1030 FM 1534",
-        "city": "HILLSBORO",
-        "state": "TX",
-        "zip": "76645"
-      },
-      "mailing_address": {
-        "street": "PO BOX 775",
-        "city": "WHITNEY",
-        "state": "TX",
-        "zip": "76692"
-      },
-      "market_value": "8.50500000000e+004",
-      "prop_id": "111497",
-      "legal_desc_clerk": "SEE EXHIBIT \"A\" ATTACHED",
-      "legal_desc_cad": "T WATSON A-939 TR 4A   1.00 AC"
+      "score": 60,
+      "_demo": true
     },
     {
-      "doc_number": "",
-      "filing_date": "04/07/2026 10:43 AM",
-      "doc_type": "FEDERAL TAX LIEN",
-      "doc_label": "Federal Tax Lien",
-      "category": "lien",
-      "owner_name": "PAUL JOHNNIE M",
-      "all_grantors": [
-        "INTERNAL REVENUE SERVICE"
-      ],
-      "all_grantees": [
-        "PAUL JOHNNIE M"
-      ],
-      "property_address": {
-        "street": "120 HAPPY LN",
-        "city": "WHITNEY",
-        "state": "TX",
-        "zip": "76692"
-      },
-      "mailing_address": {
-        "street": "120 HAPPY LN",
-        "city": "WHITNEY",
-        "state": "TX",
-        "zip": "76692"
-      },
-      "market_value": "2.43470000000e+005",
-      "prop_id": "129633",
-      "legal_desc_clerk": "",
-      "legal_desc_cad": "QUAIL LAKE EST LT 9A"
-    },
-    {
-      "doc_number": "",
-      "filing_date": "02/24/2026 10:39 AM",
-      "doc_type": "FEDERAL TAX LIEN",
-      "doc_label": "Federal Tax Lien",
-      "category": "lien",
-      "owner_name": "DENNO THOMAS J",
-      "all_grantors": [
-        "INTERNAL REVENUE SERVICE"
-      ],
-      "all_grantees": [
-        "DENNO THOMAS J"
-      ],
-      "property_address": {
-        "street": "298 BUCKSHOT DR",
-        "city": "WHITNEY",
-        "state": "TX",
-        "zip": "76692"
-      },
-      "mailing_address": {
-        "street": "298 BUCKSHOT DR",
-        "city": "WHITNEY",
-        "state": "TX",
-        "zip": "76692"
-      },
-      "market_value": "4.47870000000e+005",
-      "prop_id": "300060",
-      "legal_desc_clerk": "",
-      "legal_desc_cad": "OVERLOOK SUBD #3 LT 72   4.359 AC"
-    },
-    {
-      "doc_number": "",
-      "filing_date": "03/13/2026 09:12 AM",
-      "doc_type": "STATE TAX LIEN",
-      "doc_label": "State Tax Lien",
-      "category": "lien",
-      "owner_name": "DIAZ DAVID",
-      "all_grantors": [
-        "TEXAS STATE OF"
-      ],
-      "all_grantees": [
-        "DIAZ DAVID"
-      ],
-      "property_address": {
-        "street": "6808 FM 2114",
-        "city": "HUBBARD",
-        "state": "TX",
-        "zip": "76648"
-      },
-      "mailing_address": {
-        "street": "6808 FM 2114",
-        "city": "HUBBARD",
-        "state": "TX",
-        "zip": "76648"
-      },
-      "market_value": "1.83940000000e+005",
-      "prop_id": "240191",
-      "legal_desc_clerk": "",
-      "legal_desc_cad": "TYLER CO SC LD A-893 #20 TR 1C   5.597 AC (MEADOWVIEW EST LT 8)"
-    },
-    {
-      "doc_number": "",
-      "filing_date": "04/08/2026 02:55 PM",
-      "doc_type": "ABSTRACT OF JUDGMENT",
-      "doc_label": "Abstract of Judgment",
-      "category": "judgment",
-      "owner_name": "WHITFIELD JAMES MICHAEL",
-      "all_grantors": [
-        "HILL COUNTY OF TEXAS"
-      ],
-      "all_grantees": [
-        "WHITFIELD JAMES MICHAEL"
-      ],
-      "property_address": {
-        "street": "518 S LLANO ST",
-        "city": "WHITNEY",
-        "state": "TX",
-        "zip": "76692"
-      },
-      "mailing_address": {
-        "street": "518 S LLANO ST",
-        "city": "WHITNEY",
-        "state": "TX",
-        "zip": "76692"
-      },
-      "market_value": "2.07490000000e+005",
-      "prop_id": "107140",
-      "legal_desc_clerk": "",
-      "legal_desc_cad": "LAKEVIEW BLK 4 LT 12 & 13"
-    },
-    {
-      "doc_number": "",
-      "filing_date": "04/08/2026 02:55 PM",
-      "doc_type": "ABSTRACT OF JUDGMENT",
-      "doc_label": "Abstract of Judgment",
-      "category": "judgment",
-      "owner_name": "BOYD JAMES E",
-      "all_grantors": [
-        "HILL COUNTY OF TEXAS"
-      ],
-      "all_grantees": [
-        "BOYD JAMES E"
-      ],
-      "property_address": {
-        "street": "250 HCR 2101",
-        "city": "WHITNEY",
-        "state": "TX",
-        "zip": "76692"
-      },
-      "mailing_address": {
-        "street": "PO BOX 26",
-        "city": "WHITNEY",
-        "state": "TX",
-        "zip": "76692"
-      },
-      "market_value": "1.16340000000e+005",
-      "prop_id": "146958",
-      "legal_desc_clerk": "",
-      "legal_desc_cad": "L JONES A-465 TR 45 LT 1   1.00 AC"
-    },
-    {
-      "doc_number": "",
-      "filing_date": "04/08/2026 02:55 PM",
-      "doc_type": "ABSTRACT OF JUDGMENT",
-      "doc_label": "Abstract of Judgment",
-      "category": "judgment",
-      "owner_name": "DELUNA RAUL",
-      "all_grantors": [
-        "HILL COUNTY OF TEXAS"
-      ],
-      "all_grantees": [
-        "DELUNA RAUL"
-      ],
-      "property_address": {
-        "street": "111 LINE ST",
-        "city": "HILLSBORO",
-        "state": "TX",
-        "zip": "76645"
-      },
-      "mailing_address": {
-        "street": "111 LINE ST",
-        "city": "HILLSBORO",
-        "state": "TX",
-        "zip": "76645"
-      },
-      "market_value": "4.29000000000e+004",
-      "prop_id": "106914",
-      "legal_desc_clerk": "",
-      "legal_desc_cad": "HARRIS BLK 10 LT 4"
-    },
-    {
-      "doc_number": "",
-      "filing_date": "04/08/2026 02:55 PM",
-      "doc_type": "ABSTRACT OF JUDGMENT",
-      "doc_label": "Abstract of Judgment",
-      "category": "judgment",
-      "owner_name": "COLLINS DOUGLAS L",
-      "all_grantors": [
-        "HILL COUNTY OF TEXAS"
-      ],
-      "all_grantees": [
-        "COLLINS DOUGLAS L"
-      ],
-      "property_address": {
-        "street": "7108 CEDAR VALLEY DR",
-        "city": "WHITNEY",
-        "state": "TX",
-        "zip": "76692"
-      },
-      "mailing_address": {
-        "street": "7108 CEDAR VALLEY DR",
-        "city": "WHITNEY",
-        "state": "TX",
-        "zip": "76692"
-      },
-      "market_value": "3.84550000000e+005",
-      "prop_id": "140793",
-      "legal_desc_clerk": "",
-      "legal_desc_cad": "WHITE BLUFF #7 LT 108"
-    },
-    {
-      "doc_number": "",
-      "filing_date": "02/10/2026 10:38 AM",
-      "doc_type": "ABSTRACT OF JUDGMENT",
-      "doc_label": "Abstract of Judgment",
-      "category": "judgment",
-      "owner_name": "JACOBS PHILLIP GLEN",
-      "all_grantors": [
-        "DEERE & COMPANY"
-      ],
-      "all_grantees": [
-        "JACOBS PHILLIP GLEN"
-      ],
-      "property_address": {
-        "street": "124 HCR 1431",
-        "city": "COVINGTON",
-        "state": "TX",
-        "zip": "76636"
-      },
-      "mailing_address": {
-        "street": "124 HCR 1431",
-        "city": "COVINGTON",
-        "state": "TX",
-        "zip": "76636"
-      },
-      "market_value": "3.99540000000e+005",
-      "prop_id": "141268",
-      "legal_desc_clerk": "",
-      "legal_desc_cad": "J MCCARTER A-555 TR 87B LT 1 & 4   6.878 AC"
-    },
-    {
-      "doc_number": "",
-      "filing_date": "04/27/2026 10:49 AM",
+      "doc_num": "2026-DEMO-0006",
       "doc_type": "AFFIDAVIT OF HEIRSHIP",
-      "doc_label": "Affidavit of Heirship",
-      "category": "probate",
-      "owner_name": "BARNES NETA BELLE DECEASED",
-      "all_grantors": [
-        "BARNES NETA BELLE DECEASED"
+      "filed": "2026-02-07",
+      "cat": "probate",
+      "cat_label": "Affidavit of Heirship",
+      "owner": "GARCIA CARLOS",
+      "grantee": "GARCIA MARIA",
+      "amount": null,
+      "legal": "DEMO RECORD",
+      "prop_address": "316 ABERNATHY ST",
+      "prop_city": "HILLSBORO",
+      "prop_state": "TX",
+      "prop_zip": "76645",
+      "mail_address": "316 ABERNATHY ST",
+      "mail_city": "HILLSBORO",
+      "mail_state": "TX",
+      "mail_zip": "76645",
+      "clerk_url": "https://hillcountytx-web.tylerhost.net/web/search/DOCSEARCH100427S1",
+      "flags": [
+        "Probate / estate"
       ],
-      "all_grantees": [
-        "BARNES NETA BELLE DECEASED"
-      ],
-      "property_address": {
-        "street": "7224 CR 301 (ISLAND GROVE RD)",
-        "city": "GRANDVIEW",
-        "state": "TX",
-        "zip": "76050"
-      },
-      "mailing_address": {
-        "street": "7224 CR 301",
-        "city": "GRANDVIEW",
-        "state": "TX",
-        "zip": "76050"
-      },
-      "market_value": "1.65480000000e+005",
-      "prop_id": "352324",
-      "legal_desc_clerk": "Abst #: 802 Survey Name: JAMES SHIPP Acres: 1.000",
-      "legal_desc_cad": "J SHIP A-802 TR 4 LT 1   0.6116 AC"
+      "score": 55,
+      "_demo": true
     },
     {
-      "doc_number": "",
-      "filing_date": "04/24/2026 03:10 PM",
-      "doc_type": "AFFIDAVIT OF HEIRSHIP",
-      "doc_label": "Affidavit of Heirship",
-      "category": "probate",
-      "owner_name": "TURNER JOHN ROBERT SR DECEASED",
-      "all_grantors": [
-        "TURNER JOHN ROBERT SR DECEASED"
+      "doc_num": "2026-DEMO-0002",
+      "doc_type": "ABSTRACT OF JUDGMENT",
+      "filed": "2026-02-03",
+      "cat": "judgment",
+      "cat_label": "Abstract of Judgment",
+      "owner": "CAPITAL ONE",
+      "grantee": "JONES MARY B",
+      "amount": 87500.0,
+      "legal": "DEMO RECORD",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "TX",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "TX",
+      "mail_zip": "",
+      "clerk_url": "https://hillcountytx-web.tylerhost.net/web/search/DOCSEARCH100427S1",
+      "flags": [
+        "Judgment lien"
       ],
-      "all_grantees": [
-        "TURNER JOHN ROBERT SR DECEASED"
-      ],
-      "property_address": {
-        "street": "562 HCR 1414",
-        "city": "COVINGTON",
-        "state": "TX",
-        "zip": "76636"
-      },
-      "mailing_address": {
-        "street": "562 HCR 1414",
-        "city": "COVINGTON",
-        "state": "TX",
-        "zip": "76636"
-      },
-      "market_value": "4.12510000000e+005",
-      "prop_id": "104069",
-      "legal_desc_clerk": "Subdivision LAKEVIEW ADDN Lot 3 Block 4",
-      "legal_desc_cad": "H BOONE A-27 TR 59B   10.826 AC"
+      "score": 50,
+      "_demo": true
     },
     {
-      "doc_number": "",
-      "filing_date": "03/10/2026 04:27 PM",
-      "doc_type": "AFFIDAVIT OF HEIRSHIP",
-      "doc_label": "Affidavit of Heirship",
-      "category": "probate",
-      "owner_name": "COX CLARENCE LOUIS DECEASED",
-      "all_grantors": [
-        "COX CLARENCE LOUIS DECEASED"
-      ],
-      "all_grantees": [
-        "COX CLARENCE LOUIS DECEASED"
-      ],
-      "property_address": {
-        "street": "407 S AVE C",
-        "city": "BLUM",
-        "state": "TX",
-        "zip": "76627"
-      },
-      "mailing_address": {
-        "street": "407 S AVE C",
-        "city": "BLUM",
-        "state": "TX",
-        "zip": "76627"
-      },
-      "market_value": "8.24400000000e+004",
-      "prop_id": "120967",
-      "legal_desc_clerk": "Subdivision TRES VIDAS RANCH SUBD Tract C19A",
-      "legal_desc_cad": "BLUM OT BLK 29 LT 1 TR 2"
-    },
-    {
-      "doc_number": "",
-      "filing_date": "04/28/2026 01:07 PM",
-      "doc_type": "CHILD SUPPORT LIEN",
-      "doc_label": "Child Support Lien",
-      "category": "lien",
-      "owner_name": "BAILEY CHRISTOPHER MADISON",
-      "all_grantors": [
-        "ATTORNEY GENERAL OF TEXAS"
-      ],
-      "all_grantees": [
-        "BAILEY CHRISTOPHER MADISON"
-      ],
-      "property_address": {
-        "street": "408 HCR 1414",
-        "city": "BLUM",
-        "state": "TX",
-        "zip": "76627"
-      },
-      "mailing_address": {
-        "street": "408 HCR 1414",
-        "city": "BLUM",
-        "state": "TX",
-        "zip": "76627"
-      },
-      "market_value": "4.04490000000e+005",
-      "prop_id": "143612",
-      "legal_desc_clerk": "",
-      "legal_desc_cad": "M HOLLEMAN A-399 TR 16A   13.284 AC"
-    },
-    {
-      "doc_number": "",
-      "filing_date": "04/21/2026 09:52 AM",
-      "doc_type": "MECHANIC LIEN",
-      "doc_label": "Mechanic Lien",
-      "category": "lien",
-      "owner_name": "KINSEY MOLLY ANNA",
-      "all_grantors": [
-        "KINSEY MOLLY ANNA"
-      ],
-      "all_grantees": [
-        "KINSEY MOLLY ANNA"
-      ],
-      "property_address": {
-        "street": "121 EASY ST",
-        "city": "WHITNEY",
-        "state": "TX",
-        "zip": "76692"
-      },
-      "mailing_address": {
-        "street": "121 EASY ST",
-        "city": "WHITNEY",
-        "state": "TX",
-        "zip": "76692"
-      },
-      "market_value": "2.75850000000e+005",
-      "prop_id": "130809",
-      "legal_desc_clerk": "Subdivision WOODLAND HILLS ADDN SECTION B SUBD Lot 5 Block 23   PART OF LOT",
-      "legal_desc_cad": "WOODLAND HILLS BLK 23 LT 5B, 6,& 7"
-    },
-    {
-      "doc_number": "",
-      "filing_date": "03/24/2026 03:32 PM",
-      "doc_type": "MECHANIC LIEN",
-      "doc_label": "Mechanic Lien",
-      "category": "lien",
-      "owner_name": "REID WESLEY",
-      "all_grantors": [
-        "REID WESLEY"
-      ],
-      "all_grantees": [
-        "REID WESLEY"
-      ],
-      "property_address": {
-        "street": "51 CIRCLE DR",
-        "city": "WHITNEY",
-        "state": "TX",
-        "zip": "76692"
-      },
-      "mailing_address": {
-        "street": "51 CIRCLE DR",
-        "city": "WHITNEY",
-        "state": "TX",
-        "zip": "76692"
-      },
-      "market_value": "2.45220000000e+005",
-      "prop_id": "140889",
-      "legal_desc_clerk": "Abst #: 409 Survey Name: J HICKS Acres: 11.000  MORE OR LESS",
-      "legal_desc_cad": "HIGHLAND CIRCLE LT 53"
-    },
-    {
-      "doc_number": "",
-      "filing_date": "02/18/2026 12:35 PM",
-      "doc_type": "MECHANIC LIEN",
-      "doc_label": "Mechanic Lien",
-      "category": "lien",
-      "owner_name": "VACIO DANIEL",
-      "all_grantors": [
-        "VACIO DANIEL"
-      ],
-      "all_grantees": [
-        "VACIO DANIEL"
-      ],
-      "property_address": {
-        "street": "893 HCR 4333",
-        "city": "MILFORD",
-        "state": "TX",
-        "zip": "76670"
-      },
-      "mailing_address": {
-        "street": "893 HCR 4333",
-        "city": "MILFORD",
-        "state": "TX",
-        "zip": "76670"
-      },
-      "market_value": "3.79510000000e+005",
-      "prop_id": "105734",
-      "legal_desc_clerk": "Abst #: 147 Survey Name: JOSEPH CARROLL Acres: 10.11",
-      "legal_desc_cad": "J CARROLL A-147 TR 6   10.00 AC"
-    },
-    {
-      "doc_number": "",
-      "filing_date": "03/09/2026 04:13 PM",
+      "doc_num": "2026-DEMO-0009",
       "doc_type": "QUIT CLAIM DEED",
-      "doc_label": "Quit Claim Deed",
-      "category": "other",
-      "owner_name": "HEMPHILL NICOLE YVETTE",
-      "all_grantors": [
-        "HEMPHILL NICOLE YVETTE"
+      "filed": "2026-02-10",
+      "cat": "other",
+      "cat_label": "Quit Claim Deed",
+      "owner": "ANDERSON ROBERT",
+      "grantee": "ANDERSON SUSAN",
+      "amount": null,
+      "legal": "DEMO RECORD",
+      "prop_address": "106 PR 12481",
+      "prop_city": "WHITNEY",
+      "prop_state": "TX",
+      "prop_zip": "76692",
+      "mail_address": "106 PR 12481",
+      "mail_city": "WHITNEY",
+      "mail_state": "TX",
+      "mail_zip": "76692",
+      "clerk_url": "https://hillcountytx-web.tylerhost.net/web/search/DOCSEARCH100427S1",
+      "flags": [
+        "Quit claim deed"
       ],
-      "all_grantees": [
-        "HEMPHILL NICOLE YVETTE"
+      "score": 45,
+      "_demo": true
+    },
+    {
+      "doc_num": "2026-DEMO-0005",
+      "doc_type": "LIEN",
+      "filed": "2026-02-06",
+      "cat": "lien",
+      "cat_label": "Lien",
+      "owner": "ACME CONTR",
+      "grantee": "BROWN MICHAEL",
+      "amount": 22000.0,
+      "legal": "DEMO RECORD",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "TX",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "TX",
+      "mail_zip": "",
+      "clerk_url": "https://hillcountytx-web.tylerhost.net/web/search/DOCSEARCH100427S1",
+      "flags": [
+        "Lien"
       ],
-      "property_address": {
-        "street": "139 DON LN",
-        "city": "ITASCA",
-        "state": "TX",
-        "zip": "76055"
-      },
-      "mailing_address": {
-        "street": "139 DON LN",
-        "city": "ITASCA",
-        "state": "TX",
-        "zip": "76055"
-      },
-      "market_value": "2.26280000000e+005",
-      "prop_id": "396713",
-      "legal_desc_clerk": "SEE EXHIBIT ATTACHED",
-      "legal_desc_cad": "A RENSHAW A-779 TR 38A LT 21   0.373 AC"
+      "score": 40,
+      "_demo": true
+    },
+    {
+      "doc_num": "2026-DEMO-0007",
+      "doc_type": "CHILD SUPPORT LIEN",
+      "filed": "2026-02-08",
+      "cat": "lien",
+      "cat_label": "Child Support Lien",
+      "owner": "TX OAG",
+      "grantee": "TAYLOR JAMES",
+      "amount": 7500.0,
+      "legal": "DEMO RECORD",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "TX",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "TX",
+      "mail_zip": "",
+      "clerk_url": "https://hillcountytx-web.tylerhost.net/web/search/DOCSEARCH100427S1",
+      "flags": [
+        "Child support lien"
+      ],
+      "score": 40,
+      "_demo": true
+    },
+    {
+      "doc_num": "2026-DEMO-0008",
+      "doc_type": "MECHANIC LIEN",
+      "filed": "2026-02-09",
+      "cat": "lien",
+      "cat_label": "Mechanic Lien",
+      "owner": "ABC ROOFING",
+      "grantee": "MARTINEZ LUIS",
+      "amount": 12300.0,
+      "legal": "DEMO RECORD",
+      "prop_address": "",
+      "prop_city": "",
+      "prop_state": "TX",
+      "prop_zip": "",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "TX",
+      "mail_zip": "",
+      "clerk_url": "https://hillcountytx-web.tylerhost.net/web/search/DOCSEARCH100427S1",
+      "flags": [
+        "Mechanic lien"
+      ],
+      "score": 40,
+      "_demo": true
     }
   ]
 }
