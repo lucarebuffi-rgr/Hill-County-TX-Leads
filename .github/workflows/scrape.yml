@@ -1,0 +1,49 @@
+name: Scrape Hill County
+
+on:
+  schedule:
+    - cron: '0 7 * * *'
+  workflow_dispatch:
+    inputs:
+      lookback_days:
+        description: 'Number of days to look back'
+        default: '14'
+        required: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install httpx beautifulsoup4
+      - name: Run scraper
+        env:
+          LOOKBACK_DAYS: ${{ github.event.inputs.lookback_days || '14' }}
+        run: python scraper/fetch.py
+      - name: Commit data outputs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/records.json data/ghl_export.csv dashboard/records.json
+          git diff --cached --quiet || git commit -m "Update Hill County records"
+          git push
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: dashboard/
+
+  deploy:
+    needs: scrape
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v2
