@@ -1,12 +1,12 @@
 {
-  "fetched_at": "2026-05-04T12:14:40.460807Z",
+  "fetched_at": "2026-05-05T11:49:06.917744Z",
   "source": "Hill County TX \u2013 Tyler Technologies",
   "date_range": {
-    "from": "04/20/2026",
-    "to": "05/04/2026"
+    "from": "04/21/2026",
+    "to": "05/05/2026"
   },
-  "total": 8,
-  "with_address": 8,
+  "total": 10,
+  "with_address": 10,
   "records": [
     {
       "doc_num": "00174459",
@@ -81,6 +81,58 @@
       "clerk_url": "https://hillcountytx-web.tylerhost.net/web/search/DOCSEARCH100427S1",
       "flags": [
         "Tax lien",
+        "New this week"
+      ],
+      "score": 70,
+      "_demo": false
+    },
+    {
+      "doc_num": "00174741",
+      "doc_type": "AFFIDAVIT OF HEIRSHIP",
+      "filed": "2026-05-01",
+      "cat": "probate",
+      "cat_label": "Affidavit of Heirship",
+      "owner": "TAYLOR LADONNA M WAY",
+      "grantee": "TAYLOR LADONNA M WAY ESTATE OF",
+      "amount": null,
+      "legal": "",
+      "prop_address": "604 S BRAZOS ST",
+      "prop_city": "WHITNEY",
+      "prop_state": "TX",
+      "prop_zip": "76692",
+      "mail_address": "150 COUNTY RD 249 J",
+      "mail_city": "SEMINOLE",
+      "mail_state": "TX",
+      "mail_zip": "79360",
+      "clerk_url": "https://hillcountytx-web.tylerhost.net/web/search/DOCSEARCH100427S1",
+      "flags": [
+        "Probate / estate",
+        "New this week"
+      ],
+      "score": 70,
+      "_demo": false
+    },
+    {
+      "doc_num": "00174740",
+      "doc_type": "AFFIDAVIT OF HEIRSHIP",
+      "filed": "2026-05-01",
+      "cat": "probate",
+      "cat_label": "Affidavit of Heirship",
+      "owner": "TAYLOR LADONNA M WAY",
+      "grantee": "TAYLOR LADONNA M WAY ESTATE OF",
+      "amount": null,
+      "legal": "",
+      "prop_address": "604 S BRAZOS ST",
+      "prop_city": "WHITNEY",
+      "prop_state": "TX",
+      "prop_zip": "76692",
+      "mail_address": "150 COUNTY RD 249 J",
+      "mail_city": "SEMINOLE",
+      "mail_state": "TX",
+      "mail_zip": "79360",
+      "clerk_url": "https://hillcountytx-web.tylerhost.net/web/search/DOCSEARCH100427S1",
+      "flags": [
+        "Probate / estate",
         "New this week"
       ],
       "score": 70,
