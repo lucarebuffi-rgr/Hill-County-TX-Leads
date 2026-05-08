@@ -1,12 +1,12 @@
 {
-  "fetched_at": "2026-05-07T13:19:04.812702Z",
+  "fetched_at": "2026-05-08T10:59:54.400275Z",
   "source": "Hill County TX \u2013 Tyler Technologies",
   "date_range": {
-    "from": "04/23/2026",
-    "to": "05/07/2026"
+    "from": "04/24/2026",
+    "to": "05/08/2026"
   },
-  "total": 10,
-  "with_address": 10,
+  "total": 9,
+  "with_address": 9,
   "records": [
     {
       "doc_num": "00174459",
@@ -162,32 +162,6 @@
         "New this week"
       ],
       "score": 70,
-      "_demo": false
-    },
-    {
-      "doc_num": "00174385",
-      "doc_type": "MECHANIC LIEN",
-      "filed": "2026-04-23",
-      "cat": "lien",
-      "cat_label": "Mechanic Lien",
-      "owner": "ARELLANO ANDREW",
-      "grantee": "ARELLANO ANDREW",
-      "amount": null,
-      "legal": "Subdivision BROWDER ADDN Lot 3 Block 24   PORTION OF LOT",
-      "prop_address": "304 S KING ST",
-      "prop_city": "ITASCA",
-      "prop_state": "TX",
-      "prop_zip": "76055",
-      "mail_address": "500 E SOUTH ST",
-      "mail_city": "ITASCA",
-      "mail_state": "TX",
-      "mail_zip": "76055",
-      "clerk_url": "https://hillcountytx-web.tylerhost.net/web/search/DOCSEARCH100427S1",
-      "flags": [
-        "Mechanic lien",
-        "New this week"
-      ],
-      "score": 60,
       "_demo": false
     },
     {
