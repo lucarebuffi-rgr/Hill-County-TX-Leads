@@ -1,39 +1,13 @@
 {
-  "fetched_at": "2026-05-08T10:59:54.400275Z",
+  "fetched_at": "2026-05-09T08:23:29.489524Z",
   "source": "Hill County TX \u2013 Tyler Technologies",
   "date_range": {
-    "from": "04/24/2026",
-    "to": "05/08/2026"
+    "from": "04/25/2026",
+    "to": "05/09/2026"
   },
-  "total": 9,
-  "with_address": 9,
+  "total": 7,
+  "with_address": 7,
   "records": [
-    {
-      "doc_num": "00174459",
-      "doc_type": "AFFIDAVIT OF HEIRSHIP",
-      "filed": "2026-04-24",
-      "cat": "probate",
-      "cat_label": "Affidavit of Heirship",
-      "owner": "TURNER JOHN ROBERT SR",
-      "grantee": "TURNER JOHN ROBERT SR DECEASED",
-      "amount": null,
-      "legal": "Subdivision LAKEVIEW ADDN Lot 3 Block 4",
-      "prop_address": "562 HCR 1414",
-      "prop_city": "COVINGTON",
-      "prop_state": "TX",
-      "prop_zip": "76636",
-      "mail_address": "562 HCR 1414",
-      "mail_city": "COVINGTON",
-      "mail_state": "TX",
-      "mail_zip": "76636",
-      "clerk_url": "https://hillcountytx-web.tylerhost.net/web/search/DOCSEARCH100427S1",
-      "flags": [
-        "Probate / estate",
-        "New this week"
-      ],
-      "score": 70,
-      "_demo": false
-    },
     {
       "doc_num": "00174522",
       "doc_type": "AFFIDAVIT OF HEIRSHIP",
@@ -162,32 +136,6 @@
         "New this week"
       ],
       "score": 70,
-      "_demo": false
-    },
-    {
-      "doc_num": "00174448",
-      "doc_type": "QUIT CLAIM DEED",
-      "filed": "2026-04-24",
-      "cat": "other",
-      "cat_label": "Quit Claim Deed",
-      "owner": "BATSON BARBARA SHAWNEE",
-      "grantee": "BATSON ROY KENNETH",
-      "amount": null,
-      "legal": "Subdivision CREEKWOOD ESTATES Lot 3   PART OF LOT",
-      "prop_address": "106 HIGH MEADOW DR",
-      "prop_city": "BLUM",
-      "prop_state": "TX",
-      "prop_zip": "76627",
-      "mail_address": "106 HIGH MEADOW DR",
-      "mail_city": "BLUM",
-      "mail_state": "TX",
-      "mail_zip": "76627",
-      "clerk_url": "https://hillcountytx-web.tylerhost.net/web/search/DOCSEARCH100427S1",
-      "flags": [
-        "Quit claim deed",
-        "New this week"
-      ],
-      "score": 60,
       "_demo": false
     },
     {
