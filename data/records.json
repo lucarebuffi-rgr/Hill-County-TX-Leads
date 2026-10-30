@@ -1,9 +1,9 @@
 {
-  "fetched_at": "2026-10-29T13:47:28.291863Z",
+  "fetched_at": "2026-10-30T13:40:51.337786Z",
   "source": "Hill County TX \u2013 Tyler Technologies",
   "date_range": {
-    "from": "10/15/2026",
-    "to": "10/29/2026"
+    "from": "10/16/2026",
+    "to": "10/30/2026"
   },
   "total": 7,
   "with_address": 0,
@@ -11,7 +11,7 @@
     {
       "doc_num": "2026-DEMO-0001",
       "doc_type": "LIS PENDENS",
-      "filed": "2026-10-15",
+      "filed": "2026-10-16",
       "cat": "pre_foreclosure",
       "cat_label": "Lis Pendens",
       "owner": "SMITH ROBERT",
@@ -37,7 +37,7 @@
     {
       "doc_num": "2026-DEMO-0002",
       "doc_type": "ABSTRACT OF JUDGMENT",
-      "filed": "2026-10-16",
+      "filed": "2026-10-17",
       "cat": "judgment",
       "cat_label": "Abstract of Judgment",
       "owner": "CAPITAL ONE",
@@ -63,7 +63,7 @@
     {
       "doc_num": "2026-DEMO-0006",
       "doc_type": "AFFIDAVIT OF HEIRSHIP",
-      "filed": "2026-10-20",
+      "filed": "2026-10-21",
       "cat": "probate",
       "cat_label": "Affidavit of Heirship",
       "owner": "GARCIA CARLOS",
@@ -89,7 +89,7 @@
     {
       "doc_num": "2026-DEMO-0005",
       "doc_type": "LIEN",
-      "filed": "2026-10-19",
+      "filed": "2026-10-20",
       "cat": "lien",
       "cat_label": "Lien",
       "owner": "ACME CONTR",
@@ -115,7 +115,7 @@
     {
       "doc_num": "2026-DEMO-0007",
       "doc_type": "CHILD SUPPORT LIEN",
-      "filed": "2026-10-21",
+      "filed": "2026-10-22",
       "cat": "lien",
       "cat_label": "Child Support Lien",
       "owner": "TX OAG",
@@ -141,7 +141,7 @@
     {
       "doc_num": "2026-DEMO-0008",
       "doc_type": "MECHANIC LIEN",
-      "filed": "2026-10-22",
+      "filed": "2026-10-23",
       "cat": "lien",
       "cat_label": "Mechanic Lien",
       "owner": "ABC ROOFING",
@@ -167,7 +167,7 @@
     {
       "doc_num": "2026-DEMO-0009",
       "doc_type": "QUIT CLAIM DEED",
-      "filed": "2026-10-23",
+      "filed": "2026-10-24",
       "cat": "other",
       "cat_label": "Quit Claim Deed",
       "owner": "ANDERSON ROBERT",
